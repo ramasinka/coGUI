@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="564.0" prefWidth="968.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainController">
+  <tabs>
+    <Tab id="redirectToRegistration" fx:id="tab1" text="Registration">
+         <content>
+            <AnchorPane fx:id="anch1" prefHeight="513.0" prefWidth="968.0" />
+         </content></Tab>
+    <Tab fx:id="tab2" text="Information">
+         <content>
+            <AnchorPane fx:id="anch2" prefHeight="200.0" prefWidth="200.0" />
+         </content></Tab>
+      <Tab fx:id="tab3" text="Media">
+        <content>
+          <AnchorPane fx:id="anch3" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+        </content>
+      </Tab>
+  </tabs>
+</TabPane>
