@@ -10,6 +10,7 @@ import java.io.File;
  */
 public class FileService {
      ObservableList<String> listItems = FXCollections.observableArrayList("List files");
+
     public ObservableList<String> getFileNames() {
         File folder = new File("C:\\Users\\CodeAcademy\\IdeaProjects\\coGUI\\src\\resource");
         File[] listOfFiles = folder.listFiles();
@@ -18,6 +19,11 @@ public class FileService {
                 listItems.add(listOfFiles[i].getName());
             }
         }
+        return listItems;
+    }
+
+    public ObservableList<String> getUrlList() {
+
         return listItems;
     }
 }
