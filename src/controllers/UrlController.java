@@ -8,10 +8,12 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.web.WebView;
 import service.UrlService;
 import threads.DisplayThread;
+import threads.ImageThread;
 import threads.OpenBrowserThread;
 
 import java.net.URL;
@@ -21,6 +23,9 @@ import java.util.ResourceBundle;
  * Created by CodeAcademy on 2017.07.14.
  */
 public class UrlController implements Initializable {
+
+    @FXML
+    private ImageView imageView;
 
     @FXML
     private ListView<String> urlList;
@@ -62,6 +67,10 @@ public class UrlController implements Initializable {
         Thread openBrowserThread = new Thread(new OpenBrowserThread(urlList, webView));
         openBrowserThread.setDaemon(true);
         openBrowserThread.start();
+
+        ObservableList<String> imageList = urlService.getUrlList("IMAGES.csv");
+        Thread displayImage = new Thread(new ImageThread(imageList, imageView));
+        displayImage.start();
 
         textAreaDisplay.clear();
         stopBtn.setOnAction(new EventHandler<ActionEvent>() {
