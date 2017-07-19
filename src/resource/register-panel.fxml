@@ -28,17 +28,17 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <TextField fx:id="textName" text="Name" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <TextField fx:id="textSurname" text="Surname" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <TextField fx:id="textPhone" text="Phone number" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-            <TextField fx:id="textCity" text="City" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="textName" inpText="Name" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="textSurname" inpText="Surname" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="textPhone" inpText="Phone number" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="textCity" inpText="City" GridPane.columnIndex="1" GridPane.rowIndex="3" />
             <ImageView fitHeight="233.0" fitWidth="323.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="1">
                <image>
                   <Image url="@../../../../../Public/Pictures/Sample%20Pictures/Desert.jpg" />
                </image>
             </ImageView>
-            <Button fx:id="changeBtn" mnemonicParsing="false" onAction="#handleChangeAction" prefHeight="25.0" prefWidth="65.0" text="Change" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-            <Button fx:id="insertBtn" mnemonicParsing="false" onAction="#handleInsertAction" prefHeight="25.0" prefWidth="64.0" text="Insert" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Button fx:id="changeBtn" mnemonicParsing="false" onAction="#handleChangeAction" prefHeight="25.0" prefWidth="65.0" inpText="Change" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <Button fx:id="insertBtn" mnemonicParsing="false" onAction="#handleInsertAction" prefHeight="25.0" prefWidth="64.0" inpText="Insert" GridPane.columnIndex="2" GridPane.rowIndex="3" />
             <TextArea fx:id="outputTextArea" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
          </children>
       </GridPane>

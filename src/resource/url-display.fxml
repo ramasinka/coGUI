@@ -11,8 +11,8 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="812.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.UrlController">
    <children>
       <ListView fx:id="urlList" onMouseClicked="#redirectToUrl" prefHeight="812.0" prefWidth="647.0" />
-      <Button fx:id="startBtn" layoutX="1076.0" layoutY="42.0" mnemonicParsing="false" onAction="#handleStartAction" prefHeight="25.0" prefWidth="93.0" text="Start" />
-      <Button fx:id="stopBtn" layoutX="1076.0" layoutY="115.0" mnemonicParsing="false" onAction="#handleStopAction" prefHeight="25.0" prefWidth="93.0" text="Stop" />
+      <Button fx:id="startBtn" layoutX="1076.0" layoutY="42.0" mnemonicParsing="false" onAction="#handleStartAction" prefHeight="25.0" prefWidth="93.0" inpText="Start" />
+      <Button fx:id="stopBtn" layoutX="1076.0" layoutY="115.0" mnemonicParsing="false" onAction="#handleStopAction" prefHeight="25.0" prefWidth="93.0" inpText="Stop" />
       <WebView fx:id="webView" layoutX="647.0" layoutY="427.0" prefHeight="379.0" prefWidth="553.0" />
       <TextArea fx:id="textAreaDisplay" layoutX="655.0" layoutY="115.0" prefHeight="200.0" prefWidth="200.0" />
       <ImageView fx:id="imageView" fitHeight="150.0" fitWidth="200.0" layoutX="901.0" layoutY="165.0" pickOnBounds="true" preserveRatio="true" />

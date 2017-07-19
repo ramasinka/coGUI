@@ -39,6 +39,7 @@ public class ClientApp extends Application {
         TextField nameField = new TextField("Test");
         TextField hostField = new TextField("localhost");
         TextField portField = new TextField("1000");
+        ListView listView = new ListView();
 
         Label errorLabel = new Label();
 
@@ -61,6 +62,7 @@ public class ClientApp extends Application {
         gridPaneRoot.add(portField, 1, 3);
         gridPaneRoot.add(btnSubmit, 1, 4);
         gridPaneRoot.add(errorLabel, 2, 4);
+        gridPaneRoot.add(listView, 3, 4);
         Scene scene = new Scene(gridPaneRoot);
         return scene;
     }
@@ -80,6 +82,10 @@ public class ClientApp extends Application {
             @Override
             public void handle(ActionEvent event) {
                 client.responseToServer(chatText.getText());
+                client.setInpText(chatText.getText());
+                if(!client.isRunning()){
+                    client.setRunning(true);
+                }
             }
         });
         gridPaneRoot2.add(chatListView, 1, 1);
