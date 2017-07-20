@@ -62,6 +62,7 @@ public class Client implements Runnable {
 
                 Platform.runLater(new Runnable() {
                     @Override
+
                     public void run() {
                         chatLog.add(textToChat);
                     }
